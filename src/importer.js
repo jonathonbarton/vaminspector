@@ -75,10 +75,10 @@ const formatToOption = {
 };
 
 const pathPrefixes = [
-  'Import/morphs/female\\',
-  'Import/morphs/female_genitalia\\',
-  'Import/morphs/male\\',
-  'Import/morphs/male_genitalia\\'
+  'Custom/Atom/Person/morphs/female\\',
+  'Custom/Atom/Person/morphs/female_genitalia\\',
+  'Custom/Atom/Person/morphs/male\\',
+  'Custom/Atom/Person/morphs/male_genitalia\\'
 ];
 
 
@@ -111,8 +111,8 @@ function RecursivelyGetFiles(dir) {
 }
 
 function SetPaths(VAMPath){
-  importPath = VAMPath + '\\Import';
-  texturePath = VAMPath + '\\Textures';
+  importPath = VAMPath + '\\Custom';
+  texturePath = VAMPath + '\\Custom\Textures';
   savePath = VAMPath + '\\Saves';
   appearancePath = VAMPath + '\\Saves/Person/appearance';
 }
@@ -285,7 +285,7 @@ UIImportButton.onclick = function(){
             if(key==='id'){
               return;
             }
-            let texturePath = 'Textures/';
+            let texturePath = 'Custom/Textures/';
             if(options.textureSubfolder.length>0){
               texturePath += options.textureSubfolder + '/';
             }
